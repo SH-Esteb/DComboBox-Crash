@@ -44,7 +44,7 @@ concommand.Add("crashplayer", function(ply, cmd, args)
         DComboBox:AddChoice(v:Name())
 
         DComboBox.OnSelect = function(self, index, value)
-            v:ConCommand("while true do end")
+            v:ConCommand("lua_run_cl while true do end")
 
             if (IsValid(frame)) then
                 frame:Close()
